@@ -1,0 +1,24 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+
+.accordion-button:not(.collapsed) {
+    background-color: #fbc3c3;
+}
+
+.btn-primary {
+    --bs-btn-bg: #B61817 !important;
+    --bs-btn-border-color: #B61817 !important;
+    --bs-btn-hover-bg: #B61817;
+    --bs-btn-hover-border-color: #B61817;
+    --bs-btn-active-bg: #B61817;
+    --bs-btn-active-border-color: #B61817;
+
+}
+
+.img-thumbnail {
+    border: 0px solid #fff !important;
+}
+
+.sticky-top {
+    background-color: #fff !important;
+}

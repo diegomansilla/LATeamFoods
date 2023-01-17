@@ -1,0 +1,103 @@
+strong.accordionvalores {
+  color: #B61817;
+}
+
+.businessfont {
+  font-family: Open Sans;
+  font-weight: normal;
+  font-size: 26px;
+}
+
+hr.rounded {
+  border-top: 8px solid #B61817;
+  border-radius: 5px;
+  opacity: 1;
+  width: 110px;
+  margin: auto;
+}
+
+p.parrstl {
+  font-family: Open Sans;
+}
+
+.centrar {
+  margin: auto;
+  display: block;
+}
+
+.txtarea {
+  min-height: 150px !important;
+  display: block !important;
+}
+
+.formpers {
+  border-width: 0 !important;
+}
+
+.tarjeta {
+  width: 22rem;
+}
+
+.svgstyle {
+  display: none;
+}
+
+.fontspan {
+  font-family: Open Sans, Arial, sans-serif;
+  color: #666;
+  line-height: 1.7em;
+  background: transparent;
+}
+
+.cardstyle {
+  background-size: cover;
+}
+
+.liacc {
+  font-weight: 400;
+}
+
+.contacts {
+  width: 40px;
+  height: 40px;
+}
+
+.bodyp {
+  font-family: Open Sans;
+}
+
+.h3count {
+  will-change: contents;
+}
+
+.pavlides {
+  width: 92px;
+  height: 59px;
+}
+
+.lateamfoods {
+  width: 92px;
+  height: 66px;
+}
+
+.imgstlcrd {
+  background-size: cover;
+}
+
+.h4color {
+  color: #b61817;
+}
+
+.spancolor {
+  color: #b61817;
+}
+
+.wrlddiv {
+  background-image: url('../img/5-1-modif.png');
+  width: max-content;
+  height: max-content;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: #000000a8;
+  padding: 4%;
+}

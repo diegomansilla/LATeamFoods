@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LATeamFoods</title>
+	<link rel="shortcut icon" href="img/Logo-negro-LAteamFoods-32x32-sin-fondo.png">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel='stylesheet' type='text/css' href='node_modules/bootstrap/dist/css/bootstrap.css'>
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<!--SVG PARA ICONOS-->
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svgstyle">
+		<symbol id="linkedin" viewBox="0 0 16 16">
+			<path
+				d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+		</symbol>
+		<symbol id="facebook" viewBox="0 0 16 16">
+			<path
+				d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+		</symbol>
+		<symbol id="instagram" viewBox="0 0 16 16">
+			<path
+				d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+		</symbol>
+		<symbol id="whatsapp" viewBox="0 0 16 16">
+			<path
+				d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+		</symbol>
+	</svg>
+	<!--FIN SVG-->
+	<!--NAVBAR-->
+	<header class="p-3 mb-3 border-bottom sticky-top">
+		<div class="container">
+			<!--<div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+                <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                    <svg class="bi pe-none me-2" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                    <span class="fs-5 fw-semibold">Collapsible</span>
+                </a>
+                <ul class="list-unstyled ps-0">
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                            Home
+                        </button>
+                        <div class="collapse show" id="home-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Updates</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Reports</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                            Dashboard
+                        </button>
+                        <div class="collapse" id="dashboard-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Weekly</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a>
+                                </li>
+                                <li><a href="#"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                            Orders
+                        </button>
+                        <div class="collapse" id="orders-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New</a>
+                                </li>
+                                <li><a href="#"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">Processed</a></li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Shipped</a>
+                                </li>
+                                <li><a href="#"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">Returned</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="border-top my-3"></li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                            Account
+                        </button>
+                        <div class="collapse" id="account-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New...</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Profile</a>
+                                </li>
+                                <li><a href="#"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">Settings</a></li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sign
+                                        out</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>-->
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+				<a href="index.html" alt="LATeamFoods" title="LATeamFoods"><img
+						src="img/Logo-negro-LAteamFoods-32x32-sin-fondo.png" alt="Logo" /></a>
+				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+					<li>
+						<strong><a href="index.html" class="nav-link px-2 link-secondary">Home</a></strong>
+					</li>
+					<li><strong><a href="index.html#business" class="nav-link px-2 link-secondary">Empresa</a></strong>
+					</li>
+					<li class="dropdown">
+						<a class="nav-link dropdown-toggle px-2 link-secondary" data-bs-toggle="dropdown"
+							aria-expanded="true" href="index.html#prod"><strong>Productos</strong></a>
+						<ul class="dropdown-menu text-small">
+							<li><a class="dropdown-item link-secondary"
+									href="conservas-de-frutas-2.html"><strong>Conservas de frutas</strong></a></li>
+							<li><a class="dropdown-item link-secondary"
+									href="conservas-de-vegetales.html"><strong>Conservas de vegetales</strong></a>
+							</li>
+							<li><a class="dropdown-item link-secondary"
+									href="conservas-de-pescado.html"><strong>Conservas de pescado</strong></a></li>
+							<li><a class="dropdown-item link-secondary" href="aceites.html"><strong>Aceites</strong></a>
+							</li>
+							<li><a class="dropdown-item link-secondary"
+									href="arroz-legumbres-y-cereales.html"><strong>Arroz, legumbres y
+										cereales</strong></a></li>
+							<li><a class="dropdown-item link-secondary" href="otros.html"><strong>Otros</strong></a>
+							</li>
+						</ul>
+					</li>
+					<li><strong><a href="index.html#representation"
+								class="nav-link px-2 link-secondary">Representaciones</a></strong></li>
+					<li><a class="nav-link px-2 link-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+							href="/">
+							<strong>Newsletter</strong>
+						</a></li>
+					<li><strong><a href="index.html#contact" class="nav-link px-2 link-secondary">Contacto</a></strong>
+					</li>
+					<li><strong><a class="nav-link px-2 link-secondary">English</a></strong></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!--FIN NAVBAR-->
+
+	<!--LISTA PRODUCTOS-->
+	<div class="container-fluid">
+		<div class="container-fluid"
+			style="background-image: url('img/Copia-de-atun-scaled.jpg'); width: 100%; height: 100vh; background-size: cover;">
+			<div>
+				<h1>
+					<h1 class="text-center">Productos</h1>
+				</h1>
+			</div>
+		</div>
+		<button class="btn btn-primary">Pedir Cotizacion</button>
+	</div>
+
+	<!--CATALOGO DE VEGETALES-->
+	<div class="container">
+		<h1 class="pb-2 text-center">Conservas de Pescado</h1>
+		<hr class="rounded">
+		<br>
+		<div class="row">
+			<div class="col">
+				<div class="card tarjeta">
+					<img src="img/Atun-shutterstock_1886586043-scaled.jpg" style="background-size: cover;"
+						class="card-img-top" alt="Maiz">
+					<div class="card-title text-center">
+						<h3 class="card-text">Atún</h3>
+						<p>Sólido (Lomitos) / Trozos / Filetes / Desmenuzado. <br>
+							En Aceite Vegetal / Aceite de Oliva / Al Natural / Salsa de Tomate/ Sin adición de Sal</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="col">
+				<div class="card tarjeta">
+					<img src="img/caballa.jpg" style="background-size: cover;" class="card-img-top" alt="Maiz">
+					<div class="card-body">
+						<h3 class="card-text">Caballa</h3>
+						<p>Entera / Fileteada. <br>
+							En Aceite Vegetal / Al Natural/ Salsa de Tomate</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card tarjeta">
+					<img src="img/Ensalada-de-atun-shutterstock_1719788170-scaled.jpg" style="background-size: cover;"
+						class="card-img-top" alt="Maiz">
+					<div class="card-body">
+						<h3 class="card-text">Ensalada De Atún</h3>
+						<p>Estilo Mejicano / Estilo Americano / Atún y Vegetales</p>
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card tarjeta">
+					<img src="img/sardinas-1.jpg" style="background-size: cover;" class="card-img-top" alt="Maiz">
+					<div class="card-body">
+						<h3 class="card-text">Sardinas</h3>
+						<p>En Aceite Vegetal / Aceite de Oliva / Al Natural / Salsa de Tomate / Salsa Picante</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!---->
+
+	<!--FOOTER-->
+	<!--<div class="container">-->
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 d-flex align-items-center">
+					<span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc. All rights reserved. Designed By
+						Diego Mansilla</span>
+				</div>
+
+				<ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
+					<li class="ms-3">
+						<a class="text-muted" href="https://www.facebook.com/LAteamFoods/" rel="noopener"
+							target="_blank" title="Follow on Facebook">
+							<svg class="bi" width="24" height="24">
+								<use xlink:href="#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="ms-3"><a class="text-muted" href="https://www.instagram.com/lateamfoods/" rel="noopener"
+							target="_blank" title="Follow on Instagram"><svg class="bi" width="24" height="24">
+								<use xlink:href="#instagram"></use>
+							</svg></a></li>
+					<li class="ms-3"><a class="text-muted" href="https://ar.linkedin.com/company/lateamfoods"
+							rel="noopener" target="_blank" title="Follow on Linkedin"><svg class="bi" width="24"
+								height="24">
+								<use xlink:href="#linkedin"></use>
+							</svg></a></li>
+					<li class="ms-3"><a class="text-muted" href="https://wa.me/5491153137773" rel="noopener"
+							target="_blank" title="Contact on Whatsapp"><svg class="bi" width="24" height="24">
+								<use xlink:href="#whatsapp"></use>
+							</svg></a></li>
+				</ul>
+				<div class="col-md-4 d-flex align-items-center">
+					<img src="img/logo-pavlides_new1-1.png" alt="pavlides.png" style="width: 92px; height: 59px;">
+					<img src="img/Logo-LAteamFoods-1-1.png" alt="LATeamfoods.png" style="width: 92px; height: 66px;">
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--</div>-->
+	<!--FIN FOOTER-->
+
+
+	<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
